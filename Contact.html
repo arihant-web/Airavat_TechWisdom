@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Airavat TechWisdom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(180deg,#06142e 0%,#0a1f44 55%,#0c2a5c 100%);
+      color:#fff;
+      line-height:1.6;
+    }
+    .container{width:min(1180px,92%);margin:auto}
+    .contact-page{overflow:hidden}
+
+    .hero{
+      position:relative;
+      padding:90px 0 70px;
+      background:
+        radial-gradient(circle at top right, rgba(56,182,255,.22), transparent 28%),
+        radial-gradient(circle at left center, rgba(255,255,255,.06), transparent 22%);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:34px;
+      align-items:center;
+    }
+    .tag{
+      display:inline-block;
+      padding:8px 16px;
+      border:1px solid rgba(56,182,255,.45);
+      border-radius:999px;
+      font-size:14px;
+      color:#9adfff;
+      background:rgba(56,182,255,.08);
+      margin-bottom:18px;
+    }
+    h1{
+      font-size:clamp(2.2rem,5vw,4rem);
+      line-height:1.12;
+      font-weight:800;
+      margin-bottom:18px;
+    }
+    h1 span{color:#38b6ff}
+    .hero p{
+      font-size:1.04rem;
+      color:#d8e7ff;
+      max-width:650px;
+      margin-bottom:28px;
+    }
+    .btn-wrap{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{
+      padding:14px 22px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.3s ease;
+      display:inline-block;
+    }
+    .btn-primary{background:#38b6ff;color:#04152f}
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(56,182,255,.28)}
+    .btn-outline{border:1px solid rgba(255,255,255,.2);color:#fff;background:rgba(255,255,255,.04)}
+    .btn-outline:hover{background:rgba(255,255,255,.1)}
+
+    .hero-card,
+    .card,
+    .info-box,
+    .form-box,
+    .map-box,
+    .hours-box{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:26px;
+      box-shadow:0 20px 60px rgba(0,0,0,.18);
+      backdrop-filter:blur(14px);
+    }
+
+    .hero-card{padding:28px}
+    .hero-card h3{font-size:1.3rem;margin-bottom:18px}
+    .quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .quick-item{
+      background:rgba(8,20,43,.72);
+      border:1px solid rgba(56,182,255,.18);
+      border-radius:20px;
+      padding:20px;
+    }
+    .quick-item h4{font-size:1rem;color:#38b6ff;margin-bottom:8px}
+    .quick-item p,.quick-item a{font-size:.95rem;color:#d7e4fb;text-decoration:none}
+
+    .section{padding:80px 0}
+    .section-title{text-align:center;margin-bottom:46px}
+    .section-title h2{font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:12px}
+    .section-title p{color:#c8d8f3;max-width:760px;margin:auto}
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:28px;
+      align-items:start;
+    }
+    .info-stack{display:grid;gap:20px}
+    .info-box{padding:24px}
+    .info-box h3{font-size:1.25rem;margin-bottom:14px}
+    .info-list{display:grid;gap:14px}
+    .info-line{
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(8,20,43,.68);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .label{display:block;font-size:.85rem;color:#8fd7ff;margin-bottom:6px}
+    .value,.value a{color:#eaf2ff;text-decoration:none;font-weight:500}
+
+    .hours-box{padding:24px}
+    .hours-box h3{margin-bottom:14px}
+    .hours-row{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      padding:12px 0;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      color:#d8e7ff;
+    }
+    .hours-row:last-child{border-bottom:none}
+
+    .form-box{padding:30px}
+    .form-box h3{font-size:1.45rem;margin-bottom:10px}
+    .form-box p{color:#cfe0fb;margin-bottom:24px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .full{grid-column:1 / -1}
+    .field label{
+      display:block;
+      margin-bottom:8px;
+      color:#dff0ff;
+      font-size:.94rem;
+      font-weight:500;
+    }
+    .field input,
+    .field select,
+    .field textarea{
+      width:100%;
+      border:none;
+      outline:none;
+      padding:14px 16px;
+      border-radius:16px;
+      background:rgba(8,20,43,.78);
+      border:1px solid rgba(255,255,255,.10);
+      color:#fff;
+      font-family:inherit;
+      font-size:.96rem;
+    }
+    .field textarea{min-height:140px;resize:vertical}
+    .field input::placeholder,
+    .field textarea::placeholder{color:#8ea8c9}
+
+    .map-section{padding:0 0 100px}
+    .map-grid{display:grid;grid-template-columns:1fr .9fr;gap:28px}
+    .map-box{padding:18px}
+    .map-frame{
+      width:100%;
+      min-height:360px;
+      border:none;
+      border-radius:20px;
+      background:rgba(8,20,43,.8);
+    }
+    .card{padding:28px}
+    .card h3{font-size:1.35rem;margin-bottom:14px}
+    .card p{color:#d8e7ff;margin-bottom:16px}
+    .highlight-list{list-style:none;display:grid;gap:12px}
+    .highlight-list li{
+      padding:12px 14px 12px 22px;
+      position:relative;
+      background:rgba(8,20,43,.62);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;
+      color:#dbe8ff;
+    }
+    .highlight-list li::before{
+      content:'•';
+      position:absolute;
+      left:10px;
+      color:#38b6ff;
+      font-size:1.1rem;
+    }
+
+    @media (max-width: 992px){
+      .hero-grid,.contact-grid,.map-grid{grid-template-columns:1fr}
+      .quick-grid,.form-grid{grid-template-columns:1fr}
+    }
+    @media (max-width: 640px){
+      .hero{padding:70px 0 50px}
+      .section{padding:65px 0}
+      .btn-wrap{flex-direction:column;align-items:flex-start}
+      .btn{width:100%;text-align:center}
+      .hours-row{flex-direction:column;gap:4px}
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-page">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="tag">Contact Airavat TechWisdom</span>
+          <h1>Let’s <span>Connect</span> and Build Your Tech Future</h1>
+          <p>
+            Have questions about courses, admissions, fees, demo classes, or career guidance? Reach out to Airavat TechWisdom and our team will help you choose the right learning path.
+          </p>
+          <div class="btn-wrap">
+            <a href="tel:9165770032" class="btn btn-primary">Call Now</a>
+            <a href="#contact-form" class="btn btn-outline">Send Enquiry</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>Quick Contact Info</h3>
+          <div class="quick-grid">
+            <div class="quick-item">
+              <h4>Phone</h4>
+              <a href="tel:9165770032">+91 9165770032</a>
+            </div>
+            <div class="quick-item">
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/919165770032">Chat on WhatsApp</a>
+            </div>
+            <div class="quick-item">
+              <h4>Location</h4>
+              <p>Top Floor, K.K. Plaza, Board Office Square, MP Nagar, Bhopal</p>
+            </div>
+            <div class="quick-item">
+              <h4>Courses</h4>
+              <p>Python, Java, Full Stack, Data Science, Excel & more</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Get in Touch</h2>
+          <p>Contact us for course details, admission support, demo classes, or institute visits.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="info-stack">
+            <div class="info-box">
+              <h3>Contact Details</h3>
+              <div class="info-list">
+                <div class="info-line">
+                  <span class="label">Phone Number</span>
+                  <div class="value"><a href="tel:9165770032">+91 9165770032</a></div>
+                </div>
+                <div class="info-line">
+                  <span class="label">Email Address</span>
+                  <div class="value"><a href="mailto:info@airavattechwisdom.com">info@airavattechwisdom.com</a></div>
+                </div>
+                <div class="info-line">
+                  <span class="label">Institute Address</span>
+                  <div class="value">Top Floor, K.K. Plaza, Board Office Square, MP Nagar, Bhopal, Madhya Pradesh</div>
+                </div>
+                <div class="info-line">
+                  <span class="label">Support</span>
+                  <div class="value">Course counselling, admissions, placement guidance, and demo booking</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hours-box">
+              <h3>Working Hours</h3>
+              <div class="hours-row"><span>Monday - Saturday</span><span>9:00 AM - 7:00 PM</span></div>
+              <div class="hours-row"><span>Sunday</span><span>By Appointment / Enquiry Only</span></div>
+            </div>
+          </div>
+
+          <div class="form-box" id="contact-form">
+            <h3>Send Us a Message</h3>
+            <p>Fill out the form below and our team will contact you shortly.</p>
+            <form>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name" />
+                </div>
+                <div class="field">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Enter your mobile number" />
+                </div>
+                <div class="field">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email" />
+                </div>
+                <div class="field">
+                  <label for="course">Interested Course</label>
+                  <select id="course" name="course">
+                    <option>Select a course</option>
+                    <option>C & C++</option>
+                    <option>Java</option>
+                    <option>Python</option>
+                    <option>Web Designing</option>
+                    <option>Full Stack Development</option>
+                    <option>Data Science</option>
+                    <option>Data Analysis</option>
+                    <option>Excel / Advanced Excel</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" placeholder="Write your enquiry here"></textarea>
+                </div>
+                <div class="field full">
+                  <button type="submit" class="btn btn-primary" style="border:none;cursor:pointer;">Submit Enquiry</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <div class="container map-grid">
+        <div class="map-box">
+          <iframe
+            class="map-frame"
+            src="https://www.google.com/maps?q=K.K.%20Plaza%20Board%20Office%20Square%20MP%20Nagar%20Bhopal&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Airavat TechWisdom Location Map"></iframe>
+        </div>
+
+        <div class="card">
+          <h3>Why Visit Airavat TechWisdom?</h3>
+          <p>
+            Visit our institute to explore courses, meet trainers, understand fee plans, and get personal guidance for your career path.
+          </p>
+          <ul class="highlight-list">
+            <li>One-to-one counselling for students</li>
+            <li>Affordable IT courses with practical learning</li>
+            <li>Small batch size and personal attention</li>
+            <li>Live projects and placement support</li>
+            <li>Convenient location in MP Nagar, Bhopal</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

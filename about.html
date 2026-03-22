@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Airavat TechWisdom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(180deg,#06142e 0%,#0a1f44 55%,#0c2a5c 100%);
+      color:#fff;
+      line-height:1.6;
+    }
+    .container{width:min(1180px,92%);margin:auto}
+    .about-page{overflow:hidden}
+    .hero{
+      position:relative;
+      padding:90px 0 70px;
+      background:
+        radial-gradient(circle at top right, rgba(56,182,255,.22), transparent 28%),
+        radial-gradient(circle at left center, rgba(255,255,255,.06), transparent 22%);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:40px;
+      align-items:center;
+    }
+    .tag{
+      display:inline-block;
+      padding:8px 16px;
+      border:1px solid rgba(56,182,255,.45);
+      border-radius:999px;
+      font-size:14px;
+      color:#9adfff;
+      background:rgba(56,182,255,.08);
+      margin-bottom:18px;
+    }
+    h1{
+      font-size:clamp(2.2rem,5vw,4rem);
+      line-height:1.12;
+      font-weight:800;
+      margin-bottom:18px;
+    }
+    h1 span{color:#38b6ff}
+    .hero p{
+      font-size:1.05rem;
+      color:#d8e7ff;
+      max-width:650px;
+      margin-bottom:28px;
+    }
+    .btn-wrap{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{
+      padding:14px 22px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:600;
+      transition:.3s ease;
+      display:inline-block;
+    }
+    .btn-primary{background:#38b6ff;color:#04152f}
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(56,182,255,.28)}
+    .btn-outline{border:1px solid rgba(255,255,255,.2);color:#fff;background:rgba(255,255,255,.04)}
+    .btn-outline:hover{background:rgba(255,255,255,.1)}
+
+    .hero-card{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:28px;
+      padding:28px;
+      backdrop-filter:blur(14px);
+      box-shadow:0 20px 60px rgba(0,0,0,.25);
+    }
+    .hero-card h3{font-size:1.3rem;margin-bottom:18px;color:#fff}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .stat-box{
+      background:rgba(8,20,43,.7);
+      border:1px solid rgba(56,182,255,.18);
+      border-radius:20px;
+      padding:20px;
+    }
+    .stat-box h2{font-size:2rem;color:#38b6ff;margin-bottom:6px}
+    .stat-box p{font-size:.94rem;color:#cfdef7;margin:0}
+
+    .section{padding:80px 0}
+    .section-title{
+      text-align:center;
+      margin-bottom:48px;
+    }
+    .section-title h2{
+      font-size:clamp(1.8rem,4vw,2.7rem);
+      margin-bottom:12px;
+    }
+    .section-title p{
+      color:#c8d8f3;
+      max-width:760px;
+      margin:auto;
+    }
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+    }
+    .card{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:0 14px 40px rgba(0,0,0,.18);
+    }
+    .card h3{font-size:1.45rem;margin-bottom:14px}
+    .card p{color:#d7e4fb}
+    .card ul{list-style:none;margin-top:16px}
+    .card ul li{
+      padding:10px 0 10px 24px;
+      position:relative;
+      color:#d7e4fb;
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
+    .card ul li:last-child{border-bottom:none}
+    .card ul li::before{
+      content:'✓';
+      position:absolute;
+      left:0;
+      color:#38b6ff;
+      font-weight:700;
+    }
+
+    .values{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+    .value-box{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:24px;
+      padding:26px 22px;
+      text-align:center;
+      transition:.3s ease;
+    }
+    .value-box:hover{transform:translateY(-6px);border-color:rgba(56,182,255,.4)}
+    .icon{
+      width:62px;height:62px;border-radius:18px;
+      margin:0 auto 16px;
+      display:grid;place-items:center;
+      background:rgba(56,182,255,.14);
+      border:1px solid rgba(56,182,255,.22);
+      color:#38b6ff;font-size:1.5rem;font-weight:700;
+    }
+    .value-box h4{margin-bottom:10px;font-size:1.1rem}
+    .value-box p{font-size:.95rem;color:#d7e4fb}
+
+    .courses{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    .course-item{
+      background:linear-gradient(180deg,rgba(56,182,255,.13),rgba(255,255,255,.05));
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:20px;
+      padding:20px;
+      font-weight:600;
+      color:#fff;
+      text-align:center;
+    }
+
+    .cta{
+      padding:80px 0 100px;
+    }
+    .cta-box{
+      text-align:center;
+      background:linear-gradient(135deg,rgba(56,182,255,.18),rgba(255,255,255,.07));
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:30px;
+      padding:52px 24px;
+      box-shadow:0 20px 60px rgba(0,0,0,.2);
+    }
+    .cta-box h2{font-size:clamp(1.8rem,4vw,3rem);margin-bottom:14px}
+    .cta-box p{max-width:760px;margin:0 auto 24px;color:#dbe7fa}
+
+    @media (max-width: 992px){
+      .hero-grid,.about-grid{grid-template-columns:1fr}
+      .values,.courses{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width: 640px){
+      .hero{padding:70px 0 50px}
+      .section{padding:65px 0}
+      .values,.courses,.stats{grid-template-columns:1fr}
+      .btn-wrap{flex-direction:column;align-items:flex-start}
+      .btn{width:100%;text-align:center}
+    }
+  </style>
+</head>
+<body>
+  <div class="about-page">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="tag">About Airavat TechWisdom</span>
+          <h1>Building <span>Future-Ready Tech Skills</span> for Students & Professionals</h1>
+          <p>
+            Airavat TechWisdom is an IT training and placement institute focused on practical learning, industry-relevant skills, and career growth. We help students move from classroom knowledge to real-world confidence through expert guidance, hands-on projects, and job-oriented training.
+          </p>
+          <div class="btn-wrap">
+            <a href="#courses" class="btn btn-primary">Explore Courses</a>
+            <a href="#contact" class="btn btn-outline">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>Why Students Choose Us</h3>
+          <div class="stats">
+            <div class="stat-box">
+              <h2>10+</h2>
+              <p>Career-focused IT courses</p>
+            </div>
+            <div class="stat-box">
+              <h2>100%</h2>
+              <p>Practical learning approach</p>
+            </div>
+            <div class="stat-box">
+              <h2>Live</h2>
+              <p>Projects & assignments</p>
+            </div>
+            <div class="stat-box">
+              <h2>Small</h2>
+              <p>Batches for personal attention</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Who We Are</h2>
+          <p>
+            We are more than a coaching institute. We are a skill development partner for students who want to build a strong foundation in technology, improve their employability, and prepare for internships, jobs, and freelance opportunities.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card">
+            <h3>Our Mission</h3>
+            <p>
+              To provide affordable, high-quality, and practical IT education that empowers learners with real skills, confidence, and career direction.
+            </p>
+            <ul>
+              <li>Industry-relevant curriculum</li>
+              <li>Beginner to advanced learning path</li>
+              <li>Project-based understanding</li>
+              <li>Placement and interview support</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Our Vision</h3>
+            <p>
+              To become a trusted destination for modern tech education where students learn, build, and grow into skilled professionals ready for the digital future.
+            </p>
+            <ul>
+              <li>Career transformation through skills</li>
+              <li>Accessible education for every learner</li>
+              <li>Strong focus on practical exposure</li>
+              <li>Continuous learning and innovation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Core Values</h2>
+          <p>Everything we teach and deliver is shaped by these principles.</p>
+        </div>
+
+        <div class="values">
+          <div class="value-box">
+            <div class="icon">01</div>
+            <h4>Practical Learning</h4>
+            <p>We believe skills grow faster through projects, exercises, and hands-on practice.</p>
+          </div>
+          <div class="value-box">
+            <div class="icon">02</div>
+            <h4>Student First</h4>
+            <p>Personal attention, doubt support, and guided progress are at the center of our approach.</p>
+          </div>
+          <div class="value-box">
+            <div class="icon">03</div>
+            <h4>Career Focus</h4>
+            <p>Our training is designed to help learners prepare for internships, jobs, and professional growth.</p>
+          </div>
+          <div class="value-box">
+            <div class="icon">04</div>
+            <h4>Affordable Excellence</h4>
+            <p>We aim to make quality tech education accessible without compromising on standards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="container">
+        <div class="section-title">
+          <h2>Courses We Offer</h2>
+          <p>Programs designed for beginners, college students, and working professionals.</p>
+        </div>
+
+        <div class="courses">
+          <div class="course-item">C & C++</div>
+          <div class="course-item">Java</div>
+          <div class="course-item">Python</div>
+          <div class="course-item">Web Designing</div>
+          <div class="course-item">Full Stack Development</div>
+          <div class="course-item">Data Science</div>
+          <div class="course-item">Data Analysis</div>
+          <div class="course-item">Excel & Advanced Excel</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Start Your Learning Journey With Us</h2>
+          <p>
+            Whether you want to learn coding, build job-ready skills, or grow your career in IT, Airavat TechWisdom is here to guide you with the right training and support.
+          </p>
+          <div class="btn-wrap" style="justify-content:center;">
+            <a href="tel:9165770032" class="btn btn-primary">Call: 9165770032</a>
+            <a href="#" class="btn btn-outline">Visit Our Institute</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

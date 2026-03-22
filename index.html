@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+ <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Airavat Tech Wisdom</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Devicon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <!-- NAVBAR -->
+
+    <nav
+      id="navbar"
+      class="fixed top-0 w-full z-50 bg-[#050a30]/80 backdrop-blur-xl border-b border-white/10"
+    >
+      <!-- Scroll Progress -->
+
+      <div
+        id="progress"
+        class="absolute top-0 left-0 h-[3px] bg-[#3abbf6] w-0"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- LOGO -->
+
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 flex items-center justify-center"></div>
+
+            <span class="text-xl font-bold tracking-tight">
+              AIRAVAT <span class="text-[#3abbf6]">TECH</span>WISDOM
+            </span>
+          </div>
+
+          <!-- DESKTOP MENU -->
+
+          <div
+            class="hidden lg:flex items-center gap-10 text-sm font-semibold text-white/70"
+          >
+            <a href="index.html" class="navlink hover:text-[#3abbf6]">Home</a>
+
+            <!-- COURSES DROPDOWN -->
+
+            <div class="relative group">
+              <button class="flex items-center gap-2 hover:text-[#3abbf6]">
+                Courses
+                <i class="fas fa-chevron-down text-xs"></i>
+              </button>
+
+              <div
+                class="absolute left-0 top-8 hidden group-hover:grid grid-cols-2 gap-6 p-6 w-[420px] bg-[#050a30] border border-white/10 rounded-2xl shadow-2xl"
+              >
+                <a class="hover:text-[#3abbf6]" href="python-programming.html" target="_blank">Python Programming</a>
+                <a class="hover:text-[#3abbf6]" href="java-development.html" target="_blank">Java Development</a>
+                <a class="hover:text-[#3abbf6]" href="mern-stack.html" target="_blank">MERN Stack</a>
+                <a class="hover:text-[#3abbf6]" href="data-science.html" target="_blank">Data Science</a>
+                <a class="hover:text-[#3abbf6]" href="ai-ml.html" target="_blank">AI & ML</a>
+                <a class="hover:text-[#3abbf6]" href="full-stack-development.html" target="_blank">Full Stack Development</a>
+                
+              </div>
+            </div>
+
+                    
+
+            <a href="about.html" class="navlink hover:text-[#3abbf6]">About</a>
+
+            <a href="contact.html" class="navlink hover:text-[#3abbf6]">Contact</a>
+
+            <!-- CTA -->
+
+            <a
+              href="https://wa.me/919165770032"
+              class="bg-[#3abbf6] text-[#050a30] px-6 py-2 rounded-full font-bold hover:shadow-[0_0_20px_#3abbf6] transition"
+              target="_blank"
+            >
+              Apply Now
+            </a>
+          </div>
+
+          <!-- MOBILE MENU BUTTON -->
+
+          <button id="menuBtn" class="lg:hidden text-white text-2xl">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+
+    <div
+      id="mobileMenu"
+      class="fixed top-0 right-0 w-[80%] max-w-sm h-full bg-[#050a30] transform translate-x-full transition duration-300 z-50 p-8 shadow-2xl"
+    >
+      <div class="flex justify-between items-center mb-10">
+        <span class="text-xl text-[#3abbf6] font-bold">AIRAVAT</span>
+
+        <button id="closeBtn" class="text-3xl">&times;</button>
+      </div>
+
+      <div class="flex flex-col gap-6 text-lg">
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+
+        <a
+          class="bg-[#3abbf6] text-[#050a30] text-center py-3 rounded-xl font-bold"
+          href="https://wa.me/919165770032"
+          target="_blank"
+        >
+          Apply Now
+        </a>
+      </div>
+    </div>
+
+    <!-- DEMO PAGE CONTENT -->
+
+<section class="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- LEFT -->
+
+          <div class="col-lg-6">
+            <h1 class="hero-title mb-4">
+              <span class="accent2">Build Your Future in</span>
+              <span class="accent">Programming & AI</span>
+            </h1>
+
+            <p class="text-muted mb-4">
+              Master Python, Full Stack Development, Data Science and AI with
+              real‑world projects and industry mentors.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3">
+              <a href="https://wa.me/919165770032" class="primary-btn" target="_blank">Explore Courses</a>
+              <a href="https://wa.me/919165770032" class="secondary-btn" target="_blank">Free Demo</a>
+            </div>
+
+            <!-- stats -->
+
+            <div class="stats">
+              <div class="stat-box">
+                <div class="stat-number"></div>
+              </div>
+
+              <div class="stat-box">
+                <div class="stat-number"></div>
+              </div>
+
+              <div class="stat-box">
+                <div class="stat-number"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="col-lg-6 text-center mt-5 mt-lg-0">
+            <img
+              src="girl.png"
+              class="hero-img float img-fluid"
+              alt="Developer"
+              style="border-radius: 10px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- TECHNOLOGIES STACK -->
+<section class="tech-stack">
+
+<h2 class="tech-title">Technologies You Will Learn</h2>
+
+<div class="logo-marquee">
+
+<div class="logo-track">
+
+<div class="logo"><i class="devicon-python-plain colored"></i></div>
+<div class="logo"><i class="devicon-c-plain colored"></i></div>
+<div class="logo"><i class="devicon-cplusplus-plain colored"></i></div>
+<div class="logo"><i class="devicon-java-plain colored"></i></div>
+<div class="logo"><i class="devicon-html5-plain colored"></i></div>
+<div class="logo"><i class="devicon-css3-plain colored"></i></div>
+<div class="logo"><i class="devicon-javascript-plain colored"></i></div>
+<div class="logo"><i class="devicon-react-original colored"></i></div>
+<div class="logo"><i class="devicon-nodejs-plain colored"></i></div>
+<div class="logo"><i class="devicon-mongodb-plain colored"></i></div>
+<div class="logo"><i class="devicon-bootstrap-plain colored"></i></div>
+<div class="logo"><i class="devicon-git-plain colored"></i></div>
+<div class="logo"><i class="devicon-github-original"></i></div>
+
+<div class="logo">
+<img src="https://img.icons8.com/color/96/power-bi.png">
+</div>
+
+<div class="logo">
+<img src="https://img.icons8.com/color/96/microsoft-excel-2019.png">
+</div>
+
+<div class="logo">
+<img src="https://img.icons8.com/color/96/tableau-software.png">
+</div>
+
+<!-- Duplicate for infinite effect -->
+
+<div class="logo"><i class="devicon-python-plain colored"></i></div>
+<div class="logo"><i class="devicon-react-original colored"></i></div>
+<div class="logo"><i class="devicon-nodejs-plain colored"></i></div>
+<div class="logo"><i class="devicon-java-plain colored"></i></div>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- COurse Section -->
+ <section id="courses" class="py-16 bg-[#f8fafc]">
+      <div class="section-header">
+        <span>Future-Proof Your Career</span>
+        <h2>Explore Our Best Courses</h2>
+      </div>
+
+      <div class="swiper courseSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="course-card">
+              <div>
+                <div class="course-image">
+                  <img
+                    
+                    src="cards/img1.png"
+                    alt="C and C++ Course"
+                  />
+                </div>
+
+                <span class="badge-tag">3 Months</span>
+
+                <div class="course-title">C & C++ Programming</div>
+
+                <p class="course-desc">
+                  Master programming fundamentals, algorithms, and
+                  problem-solving skills.
+                </p>
+              </div>
+
+              <a href="#" class="btn-course">Enroll Now</a>
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="course-card">
+              <div>
+                <div class="course-image">
+                  <img
+                    
+                    src="cards/img2.png"
+                    alt="Python Course"
+                  />
+                </div>
+
+                <span class="badge-tag">4 Months</span>
+
+                <div class="course-title">Python Programming</div>
+
+                <p class="course-desc">
+                  Learn Python for automation, web development, and  AI & ML projects.
+                </p>
+              </div>
+
+              <a href="https://wa.me/919165770032" class="btn-course">Enroll Now</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="course-card">
+              <div>
+                <div class="course-image">
+                  <img
+                    
+                    src="cards/img3.png"
+                    alt="Python Course"
+                  />
+                </div>
+
+                <span class="badge-tag">6 Months</span>
+
+                <div class="course-title">Java Full Stack</div>
+
+                <p class="course-desc">
+                  Web Development & Backend with Java,Build real-world web applications using Java              
+                </p>
+              </div>
+
+              <a href="#" class="btn-course">Enroll Now</a>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="course-card">
+              <div>
+                <div class="course-image">
+                  <img
+                    
+                    src="cards/img4.png"
+                    alt="Python Course"
+                  />
+                </div>
+
+                <span class="badge-tag">6 Months</span>
+
+                <div class="course-title">MERN Stack</div>
+
+                <p class="course-desc">
+                  Develop full-stack applications using MongoDB, Express, React, and Node.js.              
+                </p>
+              </div>
+
+              <a href="#" class="btn-course">Enroll Now</a>
+            </div>
+          </div>
+ <div class="swiper-slide">
+            <div class="course-card">
+              <div>
+                <div class="course-image">
+                  <img
+                    
+                    src="cards/img5.jfif"
+                    alt="Python Course"
+                  />
+                </div>
+
+                <span class="badge-tag">8 Months</span>
+
+                <div class="course-title">Data Analysis</div>
+
+                <p class="course-desc">
+                  Learn to analyze and visualize data using Python and its libraries, and make data-driven decisions.              
+                </p>
+              </div>
+
+              <a href="https://wa.me/919165770032" class="btn-course">Enroll Now</a>
+            </div>
+          </div>
+<div class="swiper-slide">
+            <div class="course-card">
+              <div>
+                <div class="course-image">
+                  <img
+                    
+                    src="cards/img6.png"
+                    alt="Python Course"
+                  />
+                </div>
+
+                <span class="badge-tag">8 Months</span>
+
+                <div class="course-title">Data Science</div>
+
+                <p class="course-desc">
+                  Master data science techniques, machine learning and drive informed decisions.                  
+                </p>
+              </div>
+
+              <a href="#" class="btn-course">Enroll Now</a>
+            </div>
+          </div>
+
+<div class="swiper-slide">
+            <div class="course-card">
+              <div>
+                <div class="course-image">
+                  <img
+                    
+                    src="cards/img7.png"
+                    alt="Python Course"
+                  />
+                </div>
+
+                <span class="badge-tag">8 Months</span>
+
+                <div class="course-title">Numpy|Pandas</div>
+
+                <p class="course-desc">
+                  Learn to analyze and visualize data using Python and its libraries, and make data-driven decisions.              
+                </p>
+              </div>
+
+              <a href="#" class="btn-course">Enroll Now</a>
+            </div>
+          </div>
+
+<div class="swiper-slide">
+            <div class="course-card">
+              <div>
+                <div class="course-image">
+                  <img
+                    
+                    src="cards/img8.png"
+                    alt="Python Course"
+                  />
+                </div>
+
+                <span class="badge-tag">2 Months</span>
+
+                <div class="course-title">Power BI</div>
+
+                <p class="course-desc">
+                  Learn to analyze and visualize data using Power BI and Design intrective Dashboard
+                </p>
+              </div>
+
+              <a href="#" class="btn-course">Enroll Now</a>
+            </div>
+          </div>
+<div class="swiper-slide">
+            <div class="course-card">
+              <div>
+                <div class="course-image">
+                  <img
+                    
+                    src="cards/img10.jfif"
+                    alt="Python Course"
+                  />
+                </div>
+
+                <span class="badge-tag">2 Months</span>
+
+                <div class="course-title">EXCEL</div>
+
+                <p class="course-desc">
+                  Learn to analyze and visualize data using Excel  and make data-driven decisions.    
+                  
+                </p>
+              </div>
+
+              <a href="https://wa.me/919165770032" class="btn-course" target="_blank">Enroll Now</a>
+            </div>
+          </div>
+       <div class="swiper-slide">
+            <div class="course-card">
+              <div>
+                <div class="course-image">
+                  <img
+                    
+                    src="cards/img9.png"
+                    alt="Python Course"
+                  />
+                </div>
+
+                <span class="badge-tag">2 Months</span>
+
+                <div class="course-title">MY SQL</div>
+
+                <p class="course-desc">
+                  Learn to analyze and visualize data using My SQL  and Peform Database Operations.
+                </p>
+              </div>
+
+              <a href="https://wa.me/919165770032" class="btn-course" target="_blank">Enroll Now</a>
+            </div>
+          </div>
+
+      </div>
+       <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- Our Key Services -->
+<section class="highlights-section">
+        <h2 class="section-title">Our Key Services</h2>
+
+        <div class="highlights-grid">
+            <div class="highlight-box">
+                <i class="fa-solid fa-chart-line"></i>
+                <p>Weekly Tests & Tracking</p>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fa-solid fa-laptop-code"></i>
+                <p>Hands-on Live Projects</p>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fa-solid fa-diagram-project"></i>
+                <p>Major & Minor Projects</p>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fa-solid fa-user-graduate"></i>
+                <p>Personal Mentor Guidance</p>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fa-solid fa-circle-question"></i>
+                <p>Doubt Solving Sessions</p>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fa-solid fa-file-lines"></i>
+                <p>Resume & Portfolio</p>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fa-solid fa-user-tie"></i>
+                <p>Mock Interviews</p>
+            </div>
+
+            <div class="highlight-box">
+                <i class="fa-solid fa-globe"></i>
+                <p>Online & Offline Classes</p>
+            </div>
+        </div>
+    </section>
+
+  <!-- Our Key Services End -->
+
+  <!-- Why Choose Us -->
+  <section class="why-section">
+
+<div class="container">
+
+<div class="section-header">
+<span>Why Choose Us</span>
+<h2>Experience Excellence in Tech Education</h2>
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+<div class="icon-box">
+<i class="fas fa-chalkboard-teacher"></i>
+</div>
+<h3>Expert Mentors</h3>
+<p>Learn from experienced developers and AI engineers with real industry knowledge.</p>
+</div>
+
+<div class="why-card">
+<div class="icon-box">
+<i class="fas fa-laptop-code"></i>
+</div>
+<h3>Hands-on Projects</h3>
+<p>Build real-world applications using MERN stack, Python, AI and Data Science.</p>
+</div>
+
+<div class="why-card">
+<div class="icon-box">
+<i class="fas fa-rocket"></i>
+</div>
+<h3>Placement Support</h3>
+<p>Resume building, interview preparation and hiring partner connections.</p>
+</div>
+
+<div class="why-card">
+<div class="icon-box">
+<i class="fas fa-certificate"></i>
+</div>
+<h3>Industry Certification</h3>
+<p>Get certified with projects and skills recognized by tech companies.</p>
+</div>
+
+<div class="why-card">
+<div class="icon-box">
+<i class="fas fa-clock"></i>
+</div>
+<h3>Flexible Learning</h3>
+<p>Weekend, weekday and hybrid learning options for students and professionals.</p>
+</div>
+
+<div class="why-card">
+<div class="icon-box">
+<i class="fas fa-users"></i>
+</div>
+<h3>Developer Community</h3>
+<p>Connect with a growing community of coders and mentors.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="enquiry-section" id="enquiry">
+    <div class="container">
+        <div class="enquiry-grid">
+
+            <!-- Left Content -->
+            <div class="enquiry-info">
+                <span style="color: #030c18;" class="section-tag">Enquiry Now</span>
+                <h2>Start Your Tech Journey with Airavat TechWisdom</h2>
+                <p>
+                    Get expert guidance for choosing the right IT course and building your career.
+                    Our team will connect with you soon to help you select the best learning path.
+                </p>
+
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <div>
+                            <h4>Quick Support</h4>
+                            <span>Fast response from our team</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <div>
+                            <h4>Career Guidance</h4>
+                            <span>Course selection and future roadmap</span>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <div>
+                            <h4>Industry-Oriented Courses</h4>
+                            <span>Practical training with live projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Form -->
+            <div class="form-container">
+                <div class="form-header">
+                    <h3 style="color: #030c18;">Send Us Your Enquiry</h3>
+                    <p style="color: #030c18;">Fill in your details and our team will contact you shortly.</p>
+                </div>
+
+                <form class="enquiry-form" id="enquiryForm">
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder="Your Full Name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="tel" id="phone" placeholder="Mobile Number" required>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="input-group">
+                        <select id="course" required>
+                            <option value="" disabled selected>Select Course</option>
+                            <option>C / C++</option>
+                            <option>Java</option>
+                            <option>Python</option>
+                            <option>Web Designing</option>
+                            <option>Full Stack Development</option>
+                            <option>Data Science</option>
+                            <option>Data Analysis</option>
+                            <option>Power BI</option>
+                            <option>Excel</option>
+                            <option>Tally</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="message" rows="4" placeholder="Write your message..."></textarea>
+                    </div>
+
+                    <button type="submit" class="enquiry-btn">
+                        <i class="fa-solid fa-paper-plane"></i> Send Enquiry
+                    </button>
+                </form>
+
+                <div id="success-message">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h3>Enquiry Sent Successfully!</h3>
+                    <p>
+                        Thank you, <span id="user-name"></span>. Our team will contact you shortly with course details.
+                    </p>
+                    <button class="enquiry-btn secondary-btn" onclick="location.reload()">
+                        Send Another Enquiry
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-col">
+            <h2 class="footer-logo">Airavat TechWisdom</h2>
+            <p>
+                An IT Training & Placement Institute focused on practical learning,
+                industry skills, and career growth in programming, web development,
+                and data technologies.
+            </p>
+
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Courses -->
+        <div class="footer-col">
+            <h3>Popular Courses</h3>
+            <ul>
+                <li><a href="#">C / C++</a></li>
+                <li><a href="#">Java</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">Web Designing</a></li>
+                <li><a href="#">Full Stack Development</a></li>
+                <li><a href="#">Data Science</a></li>
+                <li><a href="#">Power BI</a></li>
+                <li><a href="#">Excel / Tally</a></li>
+            </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="https://wa.me/919165770032" target="_blank">Enquiry</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 4th Floor, K.K.Plaza Board Office Square, Zone-II, M.P. Nagar, Bhopal, M.P. 462011</p>
+            <p><i class="fas fa-phone-alt"></i> <a href="tel:+919165770032">+91 9165770032</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:airavattechwisdom@gmail.com">airavattechwisdom@gmail.com</a></p>
+
+            <div class="footer-buttons">
+                <a href="https://wa.me/919165770032" target="_blank" class="btn-whatsapp">WhatsApp Us</a>
+                <a href="https://maps.google.com/?q=K.K.+Plaza,+MP+Nagar,+Bhopal" target="_blank" class="btn-map">View Location</a>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <!-- Bottom -->
+    <div class="footer-bottom">
+        <p>© 2026 Airavat TechWisdom. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919165770032" class="whatsapp-btn" title="Chat on WhatsApp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Go To Top Button -->
+  <button id="topBtn" title="Go to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script>
+    const topBtn = document.getElementById("topBtn");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 300) {
+        topBtn.style.display = "flex";
+        topBtn.style.alignItems = "center";
+        topBtn.style.justifyContent = "center";
+      } else {
+        topBtn.style.display = "none";
+      }
+    });
+
+    topBtn.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+
+
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+      /* Mobile Menu */
+
+      const menuBtn = document.getElementById("menuBtn");
+      const closeBtn = document.getElementById("closeBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuBtn.onclick = () => {
+        mobileMenu.classList.remove("translate-x-full");
+      };
+
+      closeBtn.onclick = () => {
+        mobileMenu.classList.add("translate-x-full");
+      };
+
+      /* Scroll Progress */
+
+      window.addEventListener("scroll", () => {
+        const winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+
+        const height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+
+        const scrolled = (winScroll / height) * 100;
+
+        document.getElementById("progress").style.width = scrolled + "%";
+      });
+    </script>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".courseSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+          1200: { slidesPerView: 4 },
+        },
+      });
+    </script>
+
+  </body>
+</html>
